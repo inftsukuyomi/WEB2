@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бойцовский клуб</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Бойцовский клуб</h1>
+    <p>«Первое правило бойцовского клуба — не говорить о бойцовском клубе.»</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#registration">Вступление</a></li>
+        <li><a href="#filter">Поиск тренировок</a></li>
+        <li><a href="#feedback">Связаться с организаторами</a></li>
+        <li><a href="#survey">Анкета участника</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section id="registration">
+
+    <h2>Заявка на вступление</h2>
+
+    <form>
+
+        <p>
+            <label for="reg-name">Имя</label><br>
+            <input type="text" id="reg-name" name="name" required>
+        </p>
+
+        <p>
+            <label for="reg-surname">Фамилия</label><br>
+            <input type="text" id="reg-surname" name="surname" required>
+        </p>
+
+        <p>
+            <label for="reg-email">E-mail</label><br>
+            <input type="email" id="reg-email" name="email" required>
+        </p>
+
+        <p>
+            <label for="reg-phone">Телефон</label><br>
+            <input type="tel" id="reg-phone" name="phone" required>
+        </p>
+
+        <p>
+            <label for="reg-password">Пароль</label><br>
+            <input type="password" id="reg-password" name="password" required>
+        </p>
+
+        <p>
+            <label for="reg-repeat">Подтверждение пароля</label><br>
+            <input type="password" id="reg-repeat" name="repeat" required>
+        </p>
+
+        <p>
+            <label for="reg-birthday">Дата рождения</label><br>
+            <input type="date" id="reg-birthday" name="birthday" required>
+        </p>
+
+        <fieldset>
+            <legend>Пол</legend>
+
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Мужской
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                Женский
+            </label>
+        </fieldset>
+
+        <p>
+            <label>
+                <input type="checkbox" name="agree" required>
+                Я принимаю правила клуба и обязуюсь соблюдать дисциплину.
+            </label>
+        </p>
+
+        <p>
+            <button type="submit">Подать заявку</button>
+            <button type="reset">Очистить</button>
+        </p>
+
+    </form>
+
+</section>
+
+<hr>
+<section id="filter">
+
+    <h2>Поиск тренировок</h2>
+
+    <form>
+
+        <p>
+            <label for="search">Поиск</label><br>
+            <input type="search" id="search" name="search" placeholder="Например: спарринг">
+        </p>
+
+        <p>
+            <label for="category">Тип тренировки</label><br>
+            <select id="category" name="category">
+                <option>Любой</option>
+                <option>Новички</option>
+                <option>Основная группа</option>
+                <option>Спарринг</option>
+                <option>Физическая подготовка</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="sort">Сортировка</label><br>
+            <select id="sort" name="sort">
+                <option>По популярности</option>
+                <option>По времени</option>
+                <option>По сложности</option>
+            </select>
+        </p>
+
+        <fieldset>
+
+            <legend>Возраст участников</legend>
+
+            <label for="age-from">От</label>
+            <input type="number" id="age-from" min="18">
+
+            <label for="age-to">До</label>
+            <input type="number" id="age-to" min="18">
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Дополнительно</legend>
+
+            <label>
+                <input type="checkbox" name="equipment">
+                Есть защитная экипировка
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="coach">
+                Нужен инструктор
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="night">
+                Только вечерние тренировки
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Формат занятий</legend>
+
+            <label>
+                <input type="radio" name="format" checked>
+                Индивидуальные
+            </label>
+
+            <label>
+                <input type="radio" name="format">
+                Групповые
+            </label>
+
+        </fieldset>
+
+        <p>
+            <button type="submit">Применить</button>
+            <button type="reset">Сбросить</button>
+        </p>
+
+    </form>
+
+</section>
+
+<hr>
+
+<section id="feedback">
+
+    <h2>Связаться с организаторами</h2>
+
+    <form>
+
+        <p>
+            <label for="fb-name">Имя</label><br>
+            <input type="text" id="fb-name" required>
+        </p>
+
+        <p>
+            <label for="fb-email">E-mail</label><br>
+            <input type="email" id="fb-email" required>
+        </p>
+
+        <p>
+            <label for="subject">Тема обращения</label><br>
+            <input type="text" id="subject" required>
+        </p>
+
+        <p>
+            <label for="message">Сообщение</label><br>
+            <textarea id="message" rows="6" required></textarea>
+        </p>
+
+        <fieldset>
+
+            <legend>Приоритет обращения</legend>
+
+            <label>
+                <input type="radio" name="priority" checked>
+                Обычный
+            </label>
+
+            <label>
+                <input type="radio" name="priority">
+                Срочный
+            </label>
+
+            <label>
+                <input type="radio" name="priority">
+                Очень срочный
+            </label>
+
+        </fieldset>
+
+        <p>
+            <label for="file">Прикрепить файл</label><br>
+            <input type="file" id="file">
+        </p>
+
+        <p>
+            <button type="submit">Отправить сообщение</button>
+        </p>
+
+    </form>
+
+</section>
+
+<hr>
+
+<section id="survey">
+
+    <h2>Анкета нового участника</h2>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Личные данные</legend>
+
+            <p>
+                <label for="name">Имя</label><br>
+                <input type="text" id="name" required>
+            </p>
+
+            <p>
+                <label for="surname">Фамилия</label><br>
+                <input type="text" id="surname" required>
+            </p>
+
+            <p>
+                <label for="birth">Дата рождения</label><br>
+                <input type="date" id="birth" required>
+            </p>
+
+            <p>
+                <label>Пол</label>
+
+                <label>
+                    <input type="radio" name="gender2" required>
+                    Мужской
+                </label>
+
+                <label>
+                    <input type="radio" name="gender2">
+                    Женский
+                </label>
+            </p>
+
+            <p>
+                <label for="city">Город</label><br>
+                <input type="text" id="city">
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Контактные данные</legend>
+
+            <p>
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" required>
+            </p>
+
+            <p>
+                <label for="phone">Телефон</label><br>
+                <input type="tel" id="phone" required>
+            </p>
+
+            <p>
+                <label for="telegram">Telegram</label><br>
+                <input type="text" id="telegram">
+            </p>
+
+            <p>
+                <label for="site">Личный сайт</label><br>
+                <input type="url" id="site">
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Подготовка</legend>
+
+            <p>
+                <label for="experience">Опыт занятий</label><br>
+
+                <select id="experience">
+                    <option>Нет опыта</option>
+                    <option>До 1 года</option>
+                    <option>1–3 года</option>
+                    <option>Более 3 лет</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="style">Любимый стиль боя</label><br>
+
+                <select id="style">
+                    <option>Бокс</option>
+                    <option>Кикбоксинг</option>
+                    <option>Борьба</option>
+                    <option>Смешанные единоборства</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Навыки</label>
+
+                <label><input type="checkbox"> Выносливость</label>
+                <label><input type="checkbox"> Сила</label>
+                <label><input type="checkbox"> Скорость</label>
+            </p>
+
+            <p>
+                <label>Предпочитаемый формат</label>
+
+                <label><input type="radio" name="training" checked> Дневные тренировки</label>
+                <label><input type="radio" name="training"> Вечерние тренировки</label>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Дополнительная информация</legend>
+
+            <p>
+                <label for="about">Расскажите немного о себе</label><br>
+                <textarea id="about" rows="5"></textarea>
+            </p>
+
+            <p>
+                <label for="photo">Фотография или медицинская справка</label><br>
+                <input type="file" id="photo">
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" required>
+                    Подтверждаю согласие с правилами бойцовского клуба.
+                </label>
+            </p>
+
+        </fieldset>
+
+        <p>
+            <button type="submit">Отправить анкету</button>
+            <button type="reset">Очистить</button>
+        </p>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Бойцовский клуб</p>
+</footer>
+
+</body>
+</html>
