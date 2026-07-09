@@ -1,0 +1,239 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="h1">Регистрация</h1>
+</header>
+
+<nav class="menu">
+    <a href="#registration">Форма</a></li>
+    <a href="#filter">Профессия</a></li>
+    <a href="#feedback">Связаться с работодателем</a></li>
+    <a href="#bigform">Анкета</a></li>
+</nav>
+
+<main class="container">
+
+<section id="registration" class="block section">
+
+    <h2 class="h2">Форма регистрации</h2>
+
+    <form class="form">
+
+        <p>
+            <label for="reg-name">Имя</label><br>
+            <input type="text" id="reg-name" name="name" required>
+        </p>
+
+        <p>
+            <label for="reg-surname">Фамилия</label><br>
+            <input type="text" id="reg-surname" name="surname" required>
+        </p>
+
+        <p>
+            <label for="reg-email">E-mail</label><br>
+            <input type="email" id="reg-email" name="email" required>
+        </p>
+
+        <p>
+            <label for="reg-phone">Телефон</label><br>
+            <input type="tel" id="reg-phone" name="phone" required>
+        </p>
+
+        <p>
+            <label for="reg-password">Пароль</label><br>
+            <input type="password" id="reg-password" name="password" required>
+        </p>
+
+        <p>
+            <label for="reg-repeat">Подтверждение пароля</label><br>
+            <input type="password" id="reg-repeat" name="repeat" required>
+        </p>
+
+        <p>
+            <label for="reg-birthday">Дата рождения</label><br>
+            <input type="date" id="reg-birthday" name="birthday" required>
+        </p>
+
+        <fieldset>
+            <legend>Пол</legend>
+
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Мужской
+            </label>
+
+            <label>
+                <input type="radio" name="gender" value="female">
+                Женский
+            </label>
+        </fieldset>
+
+        <p>
+            <label>
+                <input type="checkbox" name="agree" required>
+                Я принимаю правила клуба и обязуюсь соблюдать дисциплину.
+            </label>
+        </p>
+
+        <p>
+            <button type="submit" class="button">Подать заявку</button>
+            <button type="reset" class="button">Очистить</button>
+        </p>
+
+    </form>
+
+</section>
+
+<section id="filter" class="block section">
+
+    <h2 class="h2">Профессия</h2>
+
+    <form class="form">
+
+        <p>
+            <label for="search">Предпочитаемая профессия</label><br>
+            <input type="search" id="search" name="search">
+        </p>
+
+        <p>
+            <label for="category">Уровень квалификации</label><br>
+            <select id="category" name="category">
+                <option>Общее образование</option>
+                <option>Среднее профессиональное образование (СПО)</option>
+                <option>Высшее образование</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="sort">Сортировка</label><br>
+            <select id="sort" name="sort">
+                <option>По уровню образования</option>
+                <option>По зарплате</option>
+                <option>По опыту работы</option>
+            </select>
+        </p>
+
+        <fieldset>
+
+            <legend>Зарплата</legend>
+
+            <label for="zp-from">От</label>
+            <input type="number" id="zp-from" min="40000">
+
+            <label for="zp-to">До</label>
+            <input type="number" id="zp-to" min="300000">
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Место работы</legend>
+
+            <label>
+                <input type="checkbox" name="udal">
+                Удаленно
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="nameste">
+                На месте работодателя
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="vahta">
+                Вахта
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Опыт</legend>
+
+            <label>
+                <input type="radio" name="opit" checked>
+                Есть опыт
+            </label>
+
+            <label>
+                <input type="radio" name="opit">
+                Нет опыта
+            </label>
+            
+
+        </fieldset>
+
+        <p>
+            <button type="submit" class="button">Применить</button>
+            <button type="reset" class="button">Сбросить</button>
+        </p>
+
+    </form>
+
+</section>
+
+
+<section id="feedback" class="block section">
+
+    <h2 class="h2">Связаться с работодателем</h2>
+
+    <form class="form">
+
+        <p>
+            <label for="fb-name">Имя</label><br>
+            <input type="text" id="fb-name" required>
+        </p>
+
+        <p>
+            <label for="fb-email">E-mail</label><br>
+            <input type="email" id="fb-email" required>
+        </p>
+
+        <p>
+            <label for="subject">Тема обращения</label><br>
+            <input type="text" id="subject" required>
+        </p>
+
+        <p>
+            <label for="message">Сообщение</label><br>
+            <textarea id="message" rows="6" required></textarea>
+        </p>
+
+        <fieldset>
+
+            <legend>Приоритет обращения</legend>
+
+            <label>
+                <input type="radio" name="priority">
+                Срочный
+            </label>
+
+            <label>
+                <input type="radio" name="priority">
+                Очень срочный
+            </label>
+
+        </fieldset>
+
+        <p>
+            <label for="file">Прикрепить файл</label><br>
+            <input type="file" id="file">
+        </p>
+
+        <p>
+            <button type="submit" class="button">Отправить сообщение</button>
+        </p>
+
+    </form>
+
+</section>
+</main>
+</body>
+</html>
